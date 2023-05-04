@@ -54,6 +54,7 @@
 
 ### Key Features <a name="key-features"></a>
   - [**Build blog project schema**]
+  - [**Processing data in models**]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -138,7 +139,6 @@ This project is not deployed
 ## 🔭 Future Features <a name="future-features"></a>
 
 - Validations and Model specs.
-- Processing data in models.
 - Setup and controllers.
 - Controllers specs.
 - Views.
