@@ -12,6 +12,8 @@
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Install](#install)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
     - [Deployment](#deployment)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
@@ -87,9 +89,6 @@ Or download the ZIP folder.
 
 ### Install
 
-Once you've cloned the repository simply run:
-
-```
 Once you've cloned the repository simply run:
 
 ```
