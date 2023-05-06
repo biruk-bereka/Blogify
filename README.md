@@ -55,6 +55,7 @@
 ### Key Features <a name="key-features"></a>
   - [**Build blog project schema**]
   - [**Processing data in models**]
+  - [**Validations and Model specs**]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -73,8 +74,8 @@ To get a local copy up and running, follow these steps.
 In order to run this project you need:
 
 - Git SCM
-- Visual Studio Code
-- Live Server extension
+- Ruby installed
+- Rails installed
 
 ### Setup
 
@@ -91,8 +92,9 @@ Or download the ZIP folder.
 Once you've cloned the repository simply run:
 
 ```
-cd Blogify
-
+bundle install
+rails db:create
+rails db:migrate
 ```
 
 And this should open the directory with all the files from the repository on the command line, to open it in your explorer if you're using windows you can run:
@@ -118,8 +120,11 @@ open terminal and run
 ```
 
 ### Run tests
+ To start tests run:
+```
+rspec spec
+```
 
-There are no tests configured for this project.
 
 ### Deployment
 
@@ -138,7 +143,6 @@ This project is not deployed
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Validations and Model specs.
 - Setup and controllers.
 - Controllers specs.
 - Views.

@@ -4,6 +4,10 @@ class Post < ApplicationRecord
   has_many :likes, dependent: :delete_all
   after_create :update_post_counter
 
+  validates :title, presence: true, length: { maximum: 250 }
+  validates :comments_counter, comparison: { greater_than_or_equal_to: 0 }
+  validates :likes_counter, comparison: { greater_than_or_equal_to: 0 }
+
   # update the post counter for the author of the post
   def update_post_counter
     if author.posts_counter.nil?
