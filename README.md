@@ -56,6 +56,7 @@
   - [**Build blog project schema**]
   - [**Processing data in models**]
   - [**Validations and Model specs**]
+  - [**Setup and controllers**]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -105,7 +106,7 @@ explorer .
 
 ### Usage
 
-To run the project, if you are on the school-library folder path on your terminal you can execute the following command:
+To run the project, if you are on the blogify folder path on your terminal you can execute the following command:
 
 ```
 code .
@@ -143,7 +144,6 @@ This project is not deployed
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Setup and controllers.
 - Controllers specs.
 - Views.
 - Forms.
