@@ -1,13 +1,5 @@
 class PostsController < ApplicationController
-    def index
-        @posts = Post.all
-    end
+  def index; end
 
-    def show
-        # @post = Post.find_by(id: params[:id])
-
-        # if @post.nil?
-        #     redirect_to posts_path
-        # end
-    end
+  def show; end
 end

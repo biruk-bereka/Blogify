@@ -1,13 +1,5 @@
 class UsersController < ApplicationController
-    def index
-        @users = User.all
-    end
+  def index; end
 
-    def show
-        # @user = User.find_by(id: params[:id])
-
-        # if @user.nil?
-        #     redirect_to users_path
-        # end
-    end
+  def show; end
 end
