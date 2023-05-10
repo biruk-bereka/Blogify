@@ -1,1 +1,9 @@
-<h1>Here is a list of all users<h1>
+<div class='flex flex-col'>
+<% @users.each do |user| %>
+    <div class='flex m-1 align-baseline '>
+      <img height = '50px' width = '50px' src= "<%= user.photo_url%>" />
+      <h2><%= user.name %></h2>
+      <p> Number of posts: <strong><%= user.posts_counter %></strong></p>
+    </div>
+<% end %>
+ </div> 
