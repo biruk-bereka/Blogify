@@ -1,1 +1,28 @@
-<h1>Here is a list of posts for a given user</h1>
+<div class='flex flex-col'>
+   <div class='flex flex-col'>
+  <div class='flex gap-8 m-1'>
+      <img src="<%= @user.photo_url%>" alt="<%= @user.name%>" class='w-32 h-32 rounded-full' />
+      <h2 class=' text-3xl'> <%= link_to @user.name, user_path(@user)  %> </h2>
+      <p> Number of posts: <strong><%= @user.posts_counter %></strong></p>
+  </div>
+</div>
+<div>
+ <% @user.posts.each do |post|%>
+        <div class="flex flex-col m-2 box-border h-fit w-full p-4 border-4">
+            <h2><%= link_to post.title, user_post_path(post)  %></h2>
+            <p><%= post.text %></p>
+            <p class=" self-end ">Comments: <%= post.comments_counter%>, Likes: <%= post.likes_counter %></p>
+            <div>
+                <% post.recent_comments.each do |comment| %>
+                    <div class="flex m-2">
+                        <p><%= comment.author.name %>: </p>
+                        <p><%= comment.text %></p>
+                    </div>
+                <%end%>
+            </div>
+        </div>
+    <%end%>
+</div>
+</div>
+
+    
