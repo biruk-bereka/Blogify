@@ -1,1 +1,14 @@
-<h1>Here is a post by a current user</h1>
+<div>
+    <div class='flex justify-between gap-10'>
+        <h1><%= @post.title%></h1>
+        <div class='flex self-end gap-1'>
+            <p>Comments:<%= @post.comments_counter %>, </p>
+            <p>Likes: <%= @post.likes_counter%></p>  
+        </div>
+    </div>
+    <%= @post.text%></p>
+    <% @post.comments.each do |comment|%>
+      <p><%= comment.author.name %>: <%= comment.text%></p>
+    <%end%>
+    
+</div>
