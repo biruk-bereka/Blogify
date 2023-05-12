@@ -58,6 +58,7 @@
   - [**Validations and Model specs**]
   - [**Setup and controllers**]
   - [**Controllers specs**] 
+  - [**Add views**] 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -145,7 +146,6 @@ This project is not deployed
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Views.
 - Forms.
 - Integration specs for Views and fixing n+1 problems.
 - Add Devise.
