@@ -1,24 +1,35 @@
-<div class='flex flex-col'>
-  <div class='flex gap-8 m-1'>
-      <img src="<%= @user.photo_url%>" alt="<%= @user.name%>" class='w-32 h-32 rounded-full' />
-      <h2 class=' text-3xl'> <%= link_to @user.name, user_path(@user)  %> </h2>
-      <p> Number of posts: <strong><%= @user.posts_counter %></strong></p>
-</div>
-<div class="flex flex-col text-center ">
-    <h2>Bio</h2>
+<div class="flex flex-col">
+  <div class="flex flex-col w-96">
+    <div class="flex gap-8 m-1 items-center">
+      <img
+        src="<%= @user.photo_url%>"
+        alt="<%= @user.name%>"
+        class="w-32 h-32 rounded-full"
+      />
+      <div class="flex flex-col gap-x-10 w-full">
+        <h2 class="text-3xl"><%= link_to @user.name, user_path(@user) %></h2>
+        <p class="self-end">
+          Number of posts: <strong><%= @user.posts_counter %></strong>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col m-3 box-border h-fit w-full p-4 border-4">
+    <h2 class="mb-1">Bio</h2>
     <p><%=@user.bio%></p>
-</div>
-<div class="flex flex-col mb-3">
+  </div>
+  <div class="flex flex-col mb-3">
     <% @recent_posts.each do |post| %>
-        <div class=" m-2  box-border h-32 w-full p-4 border-4 ">
-            <h2><%= link_to post.title, user_post_path(@user, post)  %></h2>
-            <p><%= post.text %></p>
-            <p class="flex self-end ">Comments: <%= post.comments_counter%>, Likes: <%= post.likes_counter %></p>
-        </div>
+    <div class="m-2 box-border h-32 w-full p-4 border-4">
+      <h2><%= link_to post.title, user_post_path(@user, post) %></h2>
+      <p><%= post.text %></p>
+      <p class="flex self-end">
+        Comments: <%= post.comments_counter%>, Likes: <%= post.likes_counter %>
+      </p>
+    </div>
     <%end%>
-
-    <button class="rounded-full "><%= link_to "Show all posts", user_posts_path(@user)%></button>
- </div>
+    <button class="self-center p-2 mb-8 rounded-full bg-emerald-200">
+      <%= link_to "Show all posts", user_posts_path(@user)%>
+    </button>
+  </div>
 </div>
-</div>
-
