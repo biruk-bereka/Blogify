@@ -1,4 +1,5 @@
 <div>
+  <h1></h1>
   <div class="flex flex-col justify-between gap-10 box-border h-fit w-full p-4 border-4">
     <div class="flex gap-10">
       <h1 class='font-bold' ><%= @post.title%> by <%= @post.author.name %></h1>
@@ -19,4 +20,8 @@
     <%end%>
   </div>
   <% end %>
+  <div class="flex justify-between m-4">
+    <%= button_to "Add Comment", user_post_comments_new_path(user_id: @post.author.id, post_id: @post.id), method:'get', class: "p-3 rounded-full bg-emerald-200 text-center" %>
+    <%= button_to "Like Post", user_post_likes_path(user_id: @post.author.id, post_id: @post.id), method:'post', class: "p-3 rounded-full bg-emerald-200 text-center" %>
+  </div>
 </div>
