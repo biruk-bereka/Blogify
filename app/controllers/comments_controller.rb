@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
     @user = current_user
     @post = Post.find(params[:id])
     @comment = Comment.new(comment_params)
-    @comment.author = current_user
+    @comment.author = @user
     @comment.post = @post
 
     if @comment.save
