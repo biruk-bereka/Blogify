@@ -1,7 +1,7 @@
 
 <div class="flex flex-col">
     <h1 class="font-extrabold text-center text-lg mb-3 h-">Add New Post</h1>
-    <%= form_with model: @post, url: user_posts_path do |form| %>
+    <%= form_with model: @post, url: user_posts_create_path do |form| %>
     <div class="flex flex-col">
         <%= form.label :title, class: "font-bold" %>
         <%= form.text_field :title, class: "w-96" %>
