@@ -20,6 +20,6 @@ class Post < ApplicationRecord
 
   # A method that returns the 5 most recent comments for a given post
   def recent_comments
-    Comment.where('post_id = ?', id).order('created_at ASC').limit(5)
+    Comment.include(:author).where('post_id = ?', id).order('created_at ASC').limit(5)
   end
 end
