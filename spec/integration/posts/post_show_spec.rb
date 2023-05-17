@@ -54,4 +54,9 @@ RSpec.describe 'Posts', type: :system do
     visit user_post_path(post)
     expect(page).to have_content(comment.text)
   end
+
+  it 'should show the comment of each commentor left' do
+    visit user_post_path(post)
+    expect(page).to have_content("#{user2.name}:\n#{comment.text}")
+  end
 end
