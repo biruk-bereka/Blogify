@@ -12,7 +12,7 @@ RSpec.describe 'Posts', type: :request do
     it 'returns http success' do
       expect(response).to have_http_status(:success)
     end
-  
+
     it 'returns correct body placeholder' do
       expect(response.body).to include(@first_user.name)
     end
@@ -24,12 +24,12 @@ RSpec.describe 'Posts', type: :request do
                                 bio: 'Teacher from Mexico.', posts_counter: 0)
       @post_one = Post.create(author: @first_user, title: 'Tom post 1.', text: 'Post 1 by Tom.',
                               comments_counter: 0, likes_counter: 0)
-      get user_post_path(user_id: @post_one.author_id, id:@post_one.id)
+      get user_post_path(user_id: @post_one.author_id, id: @post_one.id)
     end
     it 'returns http success' do
       expect(response).to have_http_status(:success)
     end
-  
+
     it 'returns correct body placeholder' do
       expect(response.body).to include(@first_user.name)
     end
