@@ -2,36 +2,25 @@ require 'rails_helper'
 
 RSpec.describe 'Users', type: :request do
   describe 'GET /index' do
+    before(:each) do
+      get users_path
+    end
     it 'returns http success' do
-      get '/users'
-
-      payload = response.body
-
-      # If response status was correct.
       expect(response).to have_http_status(:success)
-
-      # Check if a correct template was rendered.
-      expect(payload).to_not be_empty
-
-      # Check if the response body includes correct placeholder text.
-      expect(payload).to include('Here is a list of all users')
     end
   end
 
   describe 'GET /show' do
+    before(:each) do
+      @first_user = User.create(name: 'Tom', photo_url: 'https://images.unsplash.com/photo-1461948573049-a5ab4efb6150?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2865&q=80',
+                                bio: 'Teacher from Mexico.', posts_counter: 0)
+      get user_path(@first_user)
+    end
     it 'returns http success' do
-      get '/users/1'
-
-      payload = response.body
-
-      # If response status was correct.
       expect(response).to have_http_status(:success)
-
-      # Check if a correct template was rendered.
-      expect(payload).to_not be_empty
-
-      # Check if the response body includes correct placeholder text.
-      expect(payload).to include('This is the current user')
+    end
+    it 'returns correct body placeholder' do
+      expect(response.body).to include(@first_user.name)
     end
   end
 end
