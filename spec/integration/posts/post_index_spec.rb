@@ -19,19 +19,6 @@ RSpec.describe 'Posts', type: :system do
     end
   end
 
-
-  it 'should show the username, photo, number of post of a user and button to see all posts' do
-    visit user_posts_path(user)
-    # expect(page).to have_content(user.name) # show the username of a user
-    # expect(page).to have_css("img[src*='#{user.photo_url}']") # show the photo of a user
-    # expect(page).to have_content('Number of posts: 5') # show the number of posts of a user
-    # expect(page).to have_content(user.bio) # show the post's title of a user
-    # expect(page).to have_content(p0.title) # show the post's title of a user
-    # expect(page).to have_content(p0.text) # show the post's text of a user
-    # expect(page).to have_content('Comments: 3') # show the post's comments_counter of a user
-    # expect(page).to have_content('Likes: 0') # show the post's likes_counter of a user
-  end
-
   it 'should show the username of a user' do
     visit user_posts_path(user)
     expect(page).to have_content(user.name)
