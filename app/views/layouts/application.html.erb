@@ -12,7 +12,9 @@
   </head>
 
   <body>
-    <main class="container mx-auto mt-7 px-5 flex justify-center">
+    <main class="container mx-auto mt-7 px-5 flex flex-col justify-center">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
       <%= yield %>
     </main>
   </body>
