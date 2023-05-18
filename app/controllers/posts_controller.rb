@@ -26,4 +26,12 @@ class PostsController < ApplicationController
       redirect_to user_posts_new_path
     end
   end
+  def destroy
+    post = Post.find(params[:id])
+    user = User.find(params[:user_id])
+    post.destroy
+    flash[:notice] = 'Post has been deleted!'
+    user.decrement!(:posts_counter)
+    redirect_to user_posts_path(current_user)
+  end
 end
