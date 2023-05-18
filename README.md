@@ -61,6 +61,7 @@
   - [**Add views**] 
   - [**Add forms**]
   - [**Integration specs for Views and fixing n+1 problems**]
+  - [**Add Devise**]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -148,7 +149,6 @@ This project is not deployed
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Add Devise.
 - Add authorization rules.
 - Add API endpoints.
 
