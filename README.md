@@ -7,8 +7,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [🚀 Live Demo ](#-live-demo-)
-  - [💻 Getting Started ](#-getting-started-)
+  - [� Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Install](#install)
@@ -61,12 +60,9 @@
   - [**Add views**] 
   - [**Add forms**]
   - [**Integration specs for Views and fixing n+1 problems**]
+  - [**Add Devise**]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- Not deployed yet!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -148,7 +144,6 @@ This project is not deployed
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Add Devise.
 - Add authorization rules.
 - Add API endpoints.
 
