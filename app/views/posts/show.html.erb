@@ -18,7 +18,7 @@
       <p><%= comment.text %></p>
     </div>
     <% if can? :destroy, comment %>
-    <div class="text-center text-white shadow-md bg-red-600 p-2 rounded-sm mt-2">
+    <div class="text-center w-fit text-white shadow-md bg-red-600 p-2 rounded-sm mt-2">
       <%= button_to "Delete Comment", delete_comment_path(user_id: @post.author.id, post_id: @post.id, id: comment.id), method: :delete %>
     </div>
   <%end %>
