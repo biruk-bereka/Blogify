@@ -4,10 +4,10 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable
-  
+
   before_create :set_auth_token
   before_create :set_profile
-  
+
   has_many :posts, dependent: :delete_all, foreign_key: :author_id
   has_many :comments, dependent: :delete_all, foreign_key: :author_id
   has_many :likes, dependent: :delete_all, foreign_key: :author_id
