@@ -28,13 +28,16 @@
       </p>
     </div>
     <%end%>
-    <button class="self-center p-2 mb-8 rounded-full bg-emerald-200">
-      <% if @user.posts_counter > 0 %>
-         <%= link_to "Show all posts", user_posts_path(@user)%>
-      <%else%>
-          <p class="text-center text-red-900 p-2">No posts yet</p>
-      <% end %> 
-      <%= button_to "Add New Post", user_posts_new_path, method:'get', class: "p-3 rounded-full bg-emerald-200 text-center" %>
-    </button>
+    <div class="flex justify-between">
+      <button class="self-center p-2 mb-8 rounded-full bg-emerald-200">
+        <% if @user.posts_counter > 0 %>
+           <%= link_to "Show all posts", user_posts_path(@user)%>
+        <%else%>
+            <p class="text-center text-red-900 p-2">No posts yet</p>
+        <% end %> 
+      </button>
+    <%= button_to "Add New Post", user_posts_new_path, method:'get', class: "p-3 mb-8 rounded-full bg-emerald-200 text-center" %>
+    </div>
+   
   </div>
 </div>

@@ -7,7 +7,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [� Getting Started ](#-getting-started-)
+  - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Install](#install)
@@ -139,6 +139,11 @@ This project is not deployed
 
 - GitHub: [@Biruk-Bereka](https://github.com/biruk-bereka)
 - LinkedIn: [Biruk Bereka](https://www.linkedin.com/in/biruk-bereka1212/)
+
+👤 **Ghislain MITAHI**
+
+- GitHub: [@GhislainMitahi](https://github.com/GhislainMitahi)
+- LinkedIn: [ghislainmitahi](https://www.linkedin.com/in/ghislain-mitahi/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
