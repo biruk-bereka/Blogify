@@ -17,5 +17,15 @@ Rails.application.routes.draw do
   delete "/posts/:id/comments/:id", to: "comments#destroy", as: "delete_comment"
   post "/posts/:id/like", to: "likes#create", as: "user_post_likes"
   get "/posts/:id", to: "posts#show", as: "user_post"
+
+  namespace :api, defaults: {format: 'json'} do
+    namespace :v0 do
+      resources :users, only: :show do
+        resources :posts, only: [:index, :show], shallow: true do
+          resources :comments, only: [:index, :create]
+        end
+      end
+    end
+  end
   
 end
