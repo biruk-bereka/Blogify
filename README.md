@@ -63,6 +63,7 @@
   - [**Add Devise**]
   - [**Add authorization rules**]
   - [**Add API endpoints**]
+  - [**Add API docs**]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
