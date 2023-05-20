@@ -82,3 +82,5 @@ gem 'devise'
 gem 'cancancan'
 
 gem 'faker'
+
+gem 'rswag'
