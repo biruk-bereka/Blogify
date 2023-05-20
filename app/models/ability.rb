@@ -14,6 +14,5 @@ class Ability
     return unless user.role == 'admin'
 
     can :manage, :all
-    can :read, User, :auth_token
   end
 end

@@ -1,6 +1,4 @@
 class Api::V0::CommentsController < Api::V0::BaseController
-  skip_before_action :authenticate, only: :index
-
   def index
     post = Post.find(params[:post_id])
     @comments = Comment.where(post:)
